@@ -1,19 +1,20 @@
 {
   "name": "mern",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "MERN Authentication Template. Use this template to setup a full-stack REACT application with user authentication.",
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
     "client": "cd client && npm run start",
     "start": "./node_modules/.bin/concurrently \"nodemon .server.js\" \"npm run client\"",
     "seed": "node scripts/seedDB.js",
+    "install": "cd client && yarn install",
     "build": "cd client && npm run build",
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1",
     "installDeps": "yarn && cd client && yarn"
   },
-  "author": "",
+  "author": "Levi Crouch",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
