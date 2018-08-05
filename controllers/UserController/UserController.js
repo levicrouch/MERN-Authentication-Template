@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 module.exports = {
     //User Authentication
     auth: function (req, res) {
-        screenName: req.body.screenName
+        emailAddress: req.body.emailAddress
     }, function(err, user) {
         if (err) throw err;
 

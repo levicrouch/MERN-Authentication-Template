@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import { Button, Header, Icon, Modal } from 'semantic-ui-react'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+// import MainPage from "./components/MainPage";
+// import logo from './logo.svg';  
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router>
+        <div className="container"> 
+          <Switch>
+            <Route exact path="/" component = {Login} />
+            {/* <Route exact path="/private/:id" component={PrivateProfile} /> */}
+            {/* <Route exact path='/public/:id' component={PublicProfile} /> */}
+            <Route exact path="/signup" component={Signup} />
+            {/* <Route exact path="/admin/util" component={UtilPage} /> */}
+          </Switch>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Router>
     );
   }
 }

@@ -20,6 +20,8 @@ cd ..
 After both installations complete, run the following command in your terminal:
 
 ```
+mongod
+// Open a new bash terminal window
 yarn start
 ```
 

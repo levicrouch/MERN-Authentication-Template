@@ -5,12 +5,12 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const morgan = require("morgan");
 const app = express();
-// const jwt = require("jsonwebtoken");
-// const config = require('./config');
+const jwt = require("jsonwebtoken");
+const config = require("./config/");
 // const db = require("./models");
 const PORT = process.env.PORT || 3001;
 
-// app.set("superSecret", config.secret);
+app.set("superSecret", config.secret);
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: true }));

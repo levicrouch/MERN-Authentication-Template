@@ -4,7 +4,7 @@ const db = require("../../../models");
 const jwt = require("jsonwebtoken");
 const express = require("express");
 const fs = require("fs");
-const config = require("../../../config/config");
+const config = require("../../../config");
 const app = express();
 
 app.set("superSecret", config.secret);

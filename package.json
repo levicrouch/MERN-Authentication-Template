@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node server.js",
     "client": "cd client && npm run start",
-    "start": "./node_modules/.bin/concurrently \"nodemon .server.js\" \"npm run client\"",
+    "start": "start mongod && ./node_modules/.bin/concurrently \"nodemon .server.js\" \"npm run client\"",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && yarn install",
     "build": "cd client && npm run build",
